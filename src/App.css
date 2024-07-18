@@ -1,0 +1,118 @@
+* {
+  font-family: "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto",
+    "Helvetica", "Arial", "sans-serif" !important;
+}
+.App {
+  display: flex;
+}
+.ButtonGroup {
+  border: none;
+}
+.ButtonGroup a {
+  margin: 0 !important;
+}
+.ButtonGroup Button {
+  justify-content: flex-start;
+  color: rgb(231, 233, 234);
+  text-transform: capitalize !important;
+  font-weight: 400;
+  font-size: 20px;
+  border-radius: 30px;
+  width: max-content;
+  margin-top: 0;
+  padding: 11px !important;
+}
+.ButtonGroup Button .active {
+  font-weight: bold;
+}
+.ButtonGroup button:hover,
+.ButtonGroup2:hover,
+.grid button:hover {
+  background-color: rgba(231, 233, 234, 0.1);
+}
+
+.ButtonGroup2 {
+  height: 66px;
+  color: rgb(231, 233, 234);
+  border-radius: 30px;
+}
+.grid {
+  border-bottom: 1px solid rgb(47, 51, 54);
+  backdrop-filter: blur(12px);
+}
+
+.subgrid button {
+  color: rgb(113, 118, 123);
+  height: 53px;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+.subgrid {
+  padding: 0 !important;
+  background-color: rgba(0, 0, 0, 0.65);
+}
+
+.subgrid2{
+  color: white !important;
+  border-bottom: 4px solid rgb(29, 155, 240) !important;
+}
+.post-main {
+  color: rgb(231, 233, 234) !important;
+  border-bottom: 1px solid rgb(47, 51, 54);
+  padding-bottom: 8px !important;
+}
+
+.text div {
+  color: rgb(231, 233, 234) !important;
+  border: none !important;
+  font-size: 20px;
+  font-weight: 400;
+}
+.button-in-text {
+  text-transform: capitalize !important;
+  display: flex !important;
+  justify-content: flex-start !important;
+  align-items: flex-start !important;
+}
+
+.post-icons {
+  border-top: 1px solid rgb(47, 51, 54);
+}
+.post-icons button {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  color: rgb(29, 155, 240);
+}
+
+.post-icons button:hover:not(:last-child) {
+  background-color: rgb(1, 30, 50);
+  border-radius: 50%;
+}
+
+.card-icons p{
+  color: rgb(113, 118, 123) !important;
+  margin: 0 !important;
+}
+.card-icons button,
+.comment {
+  color: rgb(113, 118, 123) ;
+}
+
+.comment:hover {
+  background-color: rgb(1, 30, 50) !important;
+  color: rgb(29, 155, 240) !important;
+}
+
+.card-icons .like:hover {
+  background-color: rgb(51, 0, 30) !important;
+  color: rgb(249, 24, 128) !important;
+}
+
+.card-icons .retweet:hover {
+  background-color: rgb(1, 50, 1) !important;
+  color: rgb(0, 186, 124) !important;
+}
+
+.MuiListItemButton-root:hover {
+  background-color: rgb(16, 16, 16) !important;
+}
