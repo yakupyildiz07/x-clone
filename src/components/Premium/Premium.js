@@ -50,7 +50,7 @@ export const Premium = () => {
         }}
       ></Box>
       <Stack width="100%">
-        <Link href="/">
+        <Link href="">
           <IconButton sx={{ color: "white", p: 3, pb: 0 }}>
             <CloseIcon />
           </IconButton>
