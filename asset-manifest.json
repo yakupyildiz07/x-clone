@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/github.io/x-clone/static/css/main.9ba0972f.css",
-    "main.js": "/github.io/x-clone/static/js/main.803ca1ad.js",
-    "static/js/453.b7a8938e.chunk.js": "/github.io/x-clone/static/js/453.b7a8938e.chunk.js",
+    "main.css": "/github.io/x-clone/static/css/main.76081193.css",
+    "main.js": "/github.io/x-clone/static/js/main.622df2bb.js",
+    "static/js/453.658b432d.chunk.js": "/github.io/x-clone/static/js/453.658b432d.chunk.js",
     "index.html": "/github.io/x-clone/index.html",
-    "main.9ba0972f.css.map": "/github.io/x-clone/static/css/main.9ba0972f.css.map",
-    "main.803ca1ad.js.map": "/github.io/x-clone/static/js/main.803ca1ad.js.map",
-    "453.b7a8938e.chunk.js.map": "/github.io/x-clone/static/js/453.b7a8938e.chunk.js.map"
+    "main.76081193.css.map": "/github.io/x-clone/static/css/main.76081193.css.map",
+    "main.622df2bb.js.map": "/github.io/x-clone/static/js/main.622df2bb.js.map",
+    "453.658b432d.chunk.js.map": "/github.io/x-clone/static/js/453.658b432d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9ba0972f.css",
-    "static/js/main.803ca1ad.js"
+    "static/css/main.76081193.css",
+    "static/js/main.622df2bb.js"
   ]
 }
