@@ -6,7 +6,11 @@ import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from "react-router-dom"
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+<<<<<<< HEAD
   <BrowserRouter basename={process.env.PUBLIC_URL}>
+=======
+  <BrowserRouter basename={ /${process.env.PUBLIC_URL}}>
+>>>>>>> 50938aa9e74d460ba10933dc312d000d80d384f2
     <App />
   </BrowserRouter>
 );
