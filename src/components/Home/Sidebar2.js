@@ -1,9 +1,8 @@
 import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
 import { IconButton, Stack } from "@mui/material";
 import HomeIcon from "@mui/icons-material/Home";
 import SearchIcon from "@mui/icons-material/Search";
-import NotificationsIcon from "@mui/icons-material/Notifications";
+import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import CropSquareIcon from "@mui/icons-material/CropSquare";
 import BookmarkBorderIcon from "@mui/icons-material/BookmarkBorder";
@@ -63,7 +62,7 @@ const Sidebar2 = () => {
         </Link>
         <Link to="/notifications">
           <IconButton size="">
-            <NotificationsIcon fontSize="large" />
+            <NotificationsNoneIcon fontSize="large" />
           </IconButton>
         </Link>
         <Link to="/messages">

@@ -10,6 +10,7 @@ import {
   Avatar,
   IconButton,
   Typography,
+  useMediaQuery,
 } from "@mui/material";
 import {
   MoreHoriz as MoreHorizIcon,
@@ -67,7 +68,7 @@ const PostBox = () => {
       }
     }
   };
-
+  const mobileScreen = useMediaQuery('(max-width:700px)')
   return (
     <Box
       width="100%"
@@ -77,8 +78,12 @@ const PostBox = () => {
       borderBottom="1px solid rgb(47, 51, 54)"
       marginTop="12px"
     >
-      <Avatar alt="Remy Sharp" src="https://pbs.twimg.com/profile_images/1800433408708907008/Px7QWUJU_400x400.jpg" sx={{ margin: "0 8px 0 0" }} />
-      <Card sx={{ minWidth: "auto", bgcolor: "black", mb: "1px" }}>
+      <Avatar
+        alt="Remy Sharp"
+        src="https://pbs.twimg.com/profile_images/1800433408708907008/Px7QWUJU_400x400.jpg"
+        sx={{ margin: "0 8px 0 0" }}
+      />
+      <Card sx={{ minWidth: "auto", bgcolor: "black", mb: "1px",zIndex:"0" }}>
         <CardHeader
           disableTypography
           action={
@@ -110,55 +115,92 @@ const PostBox = () => {
           alt="crypto"
           sx={{ borderRadius: "16px", marginTop: "12px" }}
         />
-        <CardActions disableSpacing className="card-icons">
-          <Stack direction="row" spacing="70px" alignItems="center">
-            <IconButton
-              aria-label="comment"
-              sx={{ fontSize: "revert", color: clr, backgroundColor: bgclr }}
-              onClick={handleClick}
-              data-testid="ChatBubbleOutlineIcon"
-              className="comment"
-            >
-              <ChatBubbleOutlineIcon fontSize="small" />
-            </IconButton>
-            <p>{coment}</p>
-            <IconButton
-            className="retweet"
-              aria-label="retweet"
-              sx={{
-                fontSize: "revert",
-                color: rtClr,
-                backgroundColor: rtBgclr,
-              }}
-              onClick={handleClick}
-              data-testid="CachedIcon"
-            >
-              <CachedIcon fontSize="small" />
-            </IconButton>
-            <p>{rt}</p>
-            <IconButton
-              className="like"
-              aria-label="like"
-              sx={{
-                fontSize: "revert",
-                color: likeClr,
-                backgroundColor: likeBgclr,
-              }}
-              onClick={handleClick}
-              data-testid="FavoriteBorderIcon"
-            >
-              <FavoriteBorderIcon fontSize="small" />
-            </IconButton>
-            <p>{like}</p>
-            <IconButton aria-label="share" sx={{ fontSize: "revert",":hover":{backgroundColor:"rgb(1,30,50)",color:"rgb(29,155,240) !important"}}} >
-              <EqualizerIcon fontSize="small" />
-            </IconButton>
+        <CardActions
+          disableSpacing
+          className="card-icons"
+          justifyContent="flex-end"
+        >
+          <Stack direction="row" alignItems="center" spacing={mobileScreen? 2:10}>
+            <Stack direction="row" alignItems="center">
+              <IconButton
+                aria-label="comment"
+                sx={{ fontSize: "revert", color: clr, backgroundColor: bgclr }}
+                onClick={handleClick}
+                data-testid="ChatBubbleOutlineIcon"
+                className="comment"
+              >
+                <ChatBubbleOutlineIcon fontSize="small" />
+              </IconButton>
+              <p>{coment}</p>
+            </Stack>
+            <Stack direction="row" alignItems="center">
+              <IconButton
+                className="retweet"
+                aria-label="retweet"
+                sx={{
+                  fontSize: "revert",
+                  color: rtClr,
+                  backgroundColor: rtBgclr,
+                }}
+                onClick={handleClick}
+                data-testid="CachedIcon"
+              >
+                <CachedIcon fontSize="small" />
+              </IconButton>
+              <p>{rt}</p>
+            </Stack>
+            <Stack direction="row" alignItems="center">
+              <IconButton
+                className="like"
+                aria-label="like"
+                sx={{
+                  fontSize: "revert",
+                  color: likeClr,
+                  backgroundColor: likeBgclr,
+                }}
+                onClick={handleClick}
+                data-testid="FavoriteBorderIcon"
+              >
+                <FavoriteBorderIcon fontSize="small" />
+              </IconButton>
+              <p>{like}</p>
+            </Stack>
           </Stack>
           <Stack marginLeft="auto" direction="row">
-            <IconButton aria-label="share" sx={{ fontSize: "revert",":hover":{backgroundColor:"rgb(1,30,50)",color:"rgb(29, 155, 240) !important"}}}>
+            <IconButton
+              aria-label="share"
+              sx={{
+                fontSize: "revert",
+                ":hover": {
+                  backgroundColor: "rgb(1,30,50)",
+                  color: "rgb(29,155,240) !important",
+                },
+              }}
+            >
+              <EqualizerIcon fontSize="small" />
+            </IconButton>
+            <IconButton
+              aria-label="share"
+              sx={{
+                fontSize: "revert",
+                ":hover": {
+                  backgroundColor: "rgb(1,30,50)",
+                  color: "rgb(29, 155, 240) !important",
+                },
+              }}
+            >
               <BookmarkBorderIcon fontSize="small" />
             </IconButton>
-            <IconButton aria-label="share" sx={{ fontSize: "revert",":hover":{backgroundColor:"rgb(1,30,50)",color:"rgb(29, 155, 240) !important" }}}>
+            <IconButton
+              aria-label="share"
+              sx={{
+                fontSize: "revert",
+                ":hover": {
+                  backgroundColor: "rgb(1,30,50)",
+                  color: "rgb(29, 155, 240) !important",
+                },
+              }}
+            >
               <IosShareIcon fontSize="small" />
             </IconButton>
           </Stack>

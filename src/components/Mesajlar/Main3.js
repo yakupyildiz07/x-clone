@@ -1,9 +1,12 @@
-import { Box, Button, IconButton, Stack, Typography } from "@mui/material";
+import { Avatar, Box, Button, IconButton, Stack, Typography, useMediaQuery } from "@mui/material";
 import ForwardToInboxIcon from "@mui/icons-material/ForwardToInbox";
 import SettingsIcon from "@mui/icons-material/Settings";
 import Search from "../../sub-components/Search";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
+import { Link } from "react-router-dom";
 export const Main3 = () => {
+  const mobileScreen = useMediaQuery('(max-width:700px)')
+
   return (
     <Box
       width="388px"
@@ -15,7 +18,15 @@ export const Main3 = () => {
       borderBottom="none"
       sx={{"@media (max-width: 1017px)": {width:"inherit",}}}
     >
-      <Box display="flex" px={2} alignItems="center">
+      <Box display="flex" px={2} pt={1} alignItems="center">
+      {mobileScreen ?  <Link to="/profile">
+      <Avatar
+        
+        alt="Remy Sharp"
+        src="https://pbs.twimg.com/profile_images/1800433408708907008/Px7QWUJU_400x400.jpg"
+        sx={{ margin: "0 20px 0 0" ,width:"32px",height:"32px" }}
+      />
+      </Link>:"" }
         <Typography variant="h6" fontWeight="700">
           Mesajlar
         </Typography>

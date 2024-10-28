@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, useMediaQuery } from "@mui/material";
 import { useState } from "react";
 import { ForYou } from "../../sub-components/ForYou";
 import Post from "../../sub-components/Post";
@@ -7,6 +7,8 @@ import { IndexPage } from "../../sub-components/Tweet";
 const Feed = () => {
   const [showIndexPage, setShowIndexPage] = useState(false);
   const [showPosts, setShowPosts] = useState(true);
+  const mobileScreen = useMediaQuery('(max-width:700px)')
+
   return (
     <Box
       width={600}
@@ -24,7 +26,8 @@ const Feed = () => {
       }}
     >
       <ForYou setShowIndexPage={setShowIndexPage} setShowPosts={setShowPosts} />
-      <Post />
+      {mobileScreen ? "":<Post />}
+      
       {showPosts && <Posts />}
       {showIndexPage && <IndexPage />}
     </Box>

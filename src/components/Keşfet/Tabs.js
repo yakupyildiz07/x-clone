@@ -21,7 +21,7 @@ export const ExploreTabs = () => {
       <TabContext value={value}>
         <TabList
           onChange={handleChange}
-          centered
+          // centered
           sx={{
             borderBottom: '1px solid rgb(47,51,54)', }}
         >

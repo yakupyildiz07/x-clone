@@ -3,7 +3,7 @@ import Button from "@mui/material/Button";
 import { IconButton, Stack } from "@mui/material";
 import HomeIcon from "@mui/icons-material/Home";
 import SearchIcon from "@mui/icons-material/Search";
-import NotificationsIcon from "@mui/icons-material/Notifications";
+import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import CropSquareIcon from "@mui/icons-material/CropSquare";
 import BookmarkBorderIcon from "@mui/icons-material/BookmarkBorder";
@@ -75,7 +75,7 @@ const Sidebar = () => {
           <Button
             size=""
             startIcon={
-              <NotificationsIcon fontSize="large" sx={{ paddingRight: 1 }} />
+              <NotificationsNoneIcon fontSize="large" sx={{ paddingRight: 1 }} />
             }
           >
             Bildirimler

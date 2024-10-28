@@ -9,6 +9,7 @@ import {
   Avatar,
   IconButton,
   Typography,
+  useMediaQuery,
 } from "@mui/material";
 import {
   MoreHoriz as MoreHorizIcon,
@@ -66,6 +67,7 @@ const PostBox1 = () => {
       }
     }
   };
+  const mobileScreen = useMediaQuery('(max-width:700px)')
 
   return (
     <Box
@@ -103,7 +105,7 @@ const PostBox1 = () => {
           </Typography>
         </CardContent>
         <CardActions disableSpacing className="card-icons">
-          <Stack direction="row" spacing={10} alignItems="center">
+          <Stack direction="row" spacing={mobileScreen? 2:10} alignItems="center">
             <IconButton
               aria-label="comment"
               sx={{ fontSize: "revert", color: clr, backgroundColor: bgclr }}

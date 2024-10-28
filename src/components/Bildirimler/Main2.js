@@ -10,16 +10,21 @@ import {
   Card,
   CardMedia,
   CardContent,
+  Avatar,
+  useMediaQuery,
 } from "@mui/material";
 import SettingsIcon from "@mui/icons-material/Settings";
 import XIcon from "@mui/icons-material/X";
 import WarningIcon from "@mui/icons-material/Warning";
+import { Link } from "react-router-dom";
 export const Main2 = () => {
   const [value, setValue] = React.useState("0");
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+  const mobileScreen = useMediaQuery('(max-width:700px)')
+
   return (
     <Box
       width="600px"
@@ -32,6 +37,14 @@ export const Main2 = () => {
       sx={{ "@media (max-width: 718px)": { width: "inherit" } }}
     >
       <Box display="flex" p={1} alignItems="center">
+      {mobileScreen ?  <Link to="/profile">
+      <Avatar
+        
+        alt="Remy Sharp"
+        src="https://pbs.twimg.com/profile_images/1800433408708907008/Px7QWUJU_400x400.jpg"
+        sx={{ margin: "0 20px 0 0" ,width:"32px",height:"32px" }}
+      />
+      </Link>:"" }
         <Typography variant="h6" fontWeight="700">
           Bildirimler
         </Typography>

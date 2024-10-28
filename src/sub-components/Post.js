@@ -22,7 +22,6 @@ const Post = () => {
 
   const [isTextFieldVisible, setIsTextFieldVisible] = useState(false);
   const handleDocumentClick = (e) => {
-    // Eğer tıklanan eleman butonun kendisi değilse, stilleri sıfırla
     if (e.target.closest("#standard-multiline-flexible") === null) {
       setbutton("none");
       setclas("")
@@ -30,10 +29,8 @@ const Post = () => {
   };
 
   useEffect(() => {
-    // document'a tıklama olay dinleyicisi ekle
     document.addEventListener("click", handleDocumentClick);
     return () => {
-      // component unmount olduğunda olay dinleyicisini temizle
       document.removeEventListener("click", handleDocumentClick);
     };
   }, []);
