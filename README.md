@@ -2,7 +2,6 @@
 
 This project is a clone of the "X.com", website developed using React and JavaScript. The UI/UX design is created using Material UI. You can see everythink is the same original site. I don't develop just search and new post couse ı don't have an live api.
 
-**To View the Live Project:** [Click Here](https://yakupyildiz07.github.io/x-clone/)
 
 ## 🚀 Technologies Used
 
@@ -10,6 +9,10 @@ This project is a clone of the "X.com", website developed using React and JavaSc
 - JavaScript
 - Material-UI
 - React Router
+
+## 🚀 Live Demo
+
+👉 [View the project live](https://yakupyildiz07.github.io/x-clone/)
 
 ## 🏃 How to Run
 
